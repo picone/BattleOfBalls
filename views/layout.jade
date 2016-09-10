@@ -1,0 +1,37 @@
+doctype mobile
+html
+  head
+    title='球球大作战'
+    meta(name='viewport',content='width=device-width,initial-scale=1,user-scalable=0')
+    link(rel='stylesheet',href='//res.wx.qq.com/open/libs/weui/0.4.2/weui.min.css')
+    link(rel='stylesheet',href='/stylesheets/style.css')
+    block local_css
+  body
+    .weui_tab
+      .weui_navbar
+        .weui_navbar_item.weui_bar_item_on
+          a.weui_tabbar_label(href='/') 刷棒棒糖
+        .weui_navbar_item#nav_about
+          a.weui_tabbar_label(href='#') 关于
+      .weui_tab_bd
+        block content
+    .weui_dialog_alert#dialog(style='display:none')
+      .weui_mask
+      .weui_dialog
+        .weui_dialog_hd
+          strong.weui_dialog_title#dialog_title
+        .weui_dialog_bd#dialog_content
+        .weui_dialog_ft
+          a.weui_btn_dialog.primary 确定
+    .weui_dialog_confirm#confirm(style='display:none')
+      .weui_mask
+      .weui_dialog
+        .weui_dialog_hd
+          strong.weui_dialog_title#confirm_title
+        .weui_dialog_bd#confirm_content
+        .weui_dialog_ft
+          a.weui_btn_dialog.default#confirm_cancel 取消
+          a.weui_btn_dialog.primary#confirm_ok 确定
+    script(src='//code.jquery.com/jquery-1.12.4.min.js')
+    script(src='/javascripts/common.js')
+    block local_js

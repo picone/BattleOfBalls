@@ -1,0 +1,11 @@
+extends layout
+block local_css
+  link(rel='stylesheet',href='/stylesheets/index.css')
+block content
+  .button_sp_area
+    button.weui_btn.weui_btn_primary#start 开始
+  .weui_cells_title 账号列表
+  .weui_cells#accounts
+  a.weui_btn.weui_btn_default#add(href='/add') 添加
+block local_js
+  script(src='/javascripts/index.js')
